@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#f6e7e2"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="小洛大战四级"/>
+<title>小洛大战四级｜Sevrin的单词小站</title>
+<style>
+:root{--ink:#493a3a;--muted:#98888a;--rose:#c17c90;--rose-dark:#ae6c80;--rose-light:#f6dfe4;--pink:#fff1f2;--cream:#fffaf6;--paper:#fffdfb;--line:#eadbd7;--leaf:#7a9b87;--leaf-bg:#e9f5ed;--orange:#c3936c;--orange-bg:#fff0dc;--shadow:0 18px 48px rgba(122,73,85,.095);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC","Microsoft Yahei",sans-serif;color:var(--ink)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(circle at 12% 9%,#ffe5e9 0,transparent 26%),radial-gradient(circle at 88% 19%,#f6f2da 0,transparent 22%),#fbf4f0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:default}a{color:var(--rose-dark)}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #dbaebd;outline-offset:2px}
+#app{display:flex;min-height:100vh}.sidebar{width:234px;flex:none;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:27px;padding:34px 19px;background:rgba(255,250,249,.82);border-right:1px solid #f1dfe1;backdrop-filter:blur(22px);z-index:10}.brand{padding:8px 11px}.brand-title{font-family:Georgia,"Songti SC",serif;font-weight:800;font-size:22px;letter-spacing:1px;color:#7d5965}.brand-sub{font-size:11px;color:#b8a0a5;letter-spacing:2px;margin-top:7px}.nav{display:grid;gap:8px}.navbtn{border:0;background:none;color:#8e7c7f;width:100%;padding:13px 16px;text-align:left;border-radius:16px;display:flex;gap:14px;align-items:center;font-size:14px;font-weight:600}.navbtn span{font-size:19px}.navbtn.active{background:#fbe6ea;color:#a7687d}.sidebar-foot{margin-top:auto;font-size:12px;color:#b1979f;line-height:1.8;padding:15px 13px;background:#fff4f5;border-radius:16px}.main{flex:1;min-width:0;padding:35px 42px 80px;max-width:1350px;margin:auto}.topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px}.eyebrow{color:#b28796;font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase}.date-line{font-size:12px;color:#9a8889}.page-title{font-family:Georgia,"Songti SC",serif;font-size:30px;font-weight:700;margin:6px 0 12px;color:#634953}.page-desc{color:var(--muted);font-size:13px;line-height:1.9;margin:0 0 24px}.card{background:rgba(255,253,251,.96);border:1px solid #f1e5e0;border-radius:24px;box-shadow:var(--shadow);padding:23px}.card h3{font-size:16px;margin:0 0 7px}.tiny{font-size:12px;color:var(--muted)}.panel-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.panel-title h3{margin:0}.sub-title{font-size:13px;color:#ad8796;font-weight:700;margin-bottom:12px}.section-gap{margin-top:24px}.btn{border:1px solid transparent;border-radius:15px;padding:12px 19px;font-size:13px;font-weight:700;transition:transform .15s,background .15s;white-space:nowrap}.btn:active{transform:scale(.97)}.btn.primary{background:var(--rose);color:white;box-shadow:0 6px 14px #c17c9030}.btn.primary:hover{background:var(--rose-dark)}.btn.outline{background:white;border-color:#edced6;color:#aa7182}.btn.soft{background:#fbe9ed;color:#b47788}.btn.plain{border:0;background:none;color:var(--rose-dark);padding:7px}.btn.good{background:#e7f1e9;color:#5c8d72}.btn.bad{background:#ffebe8;color:#bf7778}.btn.small{padding:8px 12px;border-radius:11px;font-size:12px}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.between{justify-content:space-between}.pill{border-radius:100px;padding:5px 9px;font-size:11px;font-weight:700;background:#f5ece9;color:#9c8482}.pill.rose{background:#f8e3e9;color:#ad7083}.pill.green{background:var(--leaf-bg);color:#6b947b}.pill.orange{background:var(--orange-bg);color:#ae825c}.divider{height:1px;background:var(--line);margin:16px 0}.hero{background:linear-gradient(115deg,#fffaf4 10%,#fde8e9 72%,#eed9e4 100%);border:1px solid #f7e0df;border-radius:28px;min-height:254px;display:grid;grid-template-columns:1.1fr .8fr;overflow:hidden;position:relative;box-shadow:var(--shadow)}.hero:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:2%;top:-115px;background:#fff7fb8c}.hero-copy{padding:34px 30px;z-index:1}.hero h1{font-family:Georgia,"Songti SC",serif;font-size:33px;line-height:1.4;color:#6f5261;margin:12px 0 9px}.hero p{color:#997887;font-size:13px;line-height:1.85;max-width:380px;margin:0 0 20px}.hero-art{display:flex;align-items:end;justify-content:center;position:relative;min-height:215px}.dog-svg{width:min(100%,320px);height:auto;filter:drop-shadow(0 14px 12px #c98c9d40);animation:float 4s ease-in-out infinite}.jelly{position:absolute;right:5%;top:18%;font-size:45px;animation:float 3.4s ease-in-out -1.5s infinite}@keyframes float{50%{transform:translateY(-8px)}}.spark{position:absolute;color:#dba5b2;font-size:20px;top:20%;left:20%}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:17px}.stat{padding:20px;border-radius:20px;background:#fffdfa;border:1px solid #f2e5df;min-width:0}.stat b{font-family:Georgia,serif;font-size:27px;display:block;margin:8px 0 5px;color:#72555f;font-variant-numeric:tabular-nums}.stat-label{font-size:11px;color:#a58d90;font-weight:700}.stat small{font-size:11px;color:#b4a2a3}.twocol{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(290px,.85fr);gap:17px}.progress-row{margin-top:14px}.progress-head{font-size:12px;display:flex;justify-content:space-between;margin:0 0 7px}.progress-track{background:#f1e9e5;height:8px;border-radius:99px;overflow:hidden}.progress-value{background:linear-gradient(90deg,#d7a1ae,#b67c91);height:100%;border-radius:99px}.record{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed #f1e4e2}.record:last-child{border:none}.record-icon{width:38px;height:38px;background:#fae9ed;border-radius:12px;display:grid;place-items:center}.record-main{flex:1;font-size:13px;font-weight:650}.record-sub{font-size:11px;color:var(--muted);margin-top:4px}.record-score{font-size:15px;font-family:Georgia,serif;color:#997485;font-weight:700}.cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.chip{border-radius:13px;padding:8px 11px;background:#fff6f6;border:1px solid #f0dfe1;color:#9a6e78;font-size:12px}.chip strong{color:#c2768e;margin-left:5px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:17px;align-items:center}.seg{background:#fffaf8;border:1px solid #f0e0df;border-radius:14px;padding:4px;display:flex;gap:2px;flex-wrap:wrap}.seg button{background:none;border:0;color:#967b86;font-size:12px;font-weight:650;border-radius:10px;padding:8px 12px}.seg button.active{background:#f8e3e9;color:#a6627d}.search{min-width:185px;flex:1;border-radius:14px;padding:12px 14px;background:white;border:1px solid #ecdfe1;font-size:13px;color:var(--ink)}.filter-select{padding:11px 10px;border:1px solid #ecdfe1;border-radius:13px;background:white;color:#917982;font-size:12px}.word-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.wordcard{background:linear-gradient(150deg,#fffdfa 30%,#fff7f7 100%);border:1px solid #f1e3e0;border-radius:22px;padding:18px;min-height:201px;display:flex;flex-direction:column;box-shadow:0 9px 22px #bca4a412}.wordcard:hover{border-color:#eacbd3}.wordcard .word{font-family:Georgia,serif;font-size:24px;color:#71505f;overflow-wrap:anywhere}.wordcard .meaning{font-size:13px;color:#6d5b5d;line-height:1.7;min-height:41px}.wordcard .meaning.hidden{color:#b8a7a5;font-style:italic}.wordcard .meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.wordcard .actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px}.wordcard .actions .btn{flex:1}.wordcard .speak{border:0;background:#fcecee;color:#b67a89;border-radius:50%;width:34px;height:34px;font-size:17px}.empty{padding:40px 10px;text-align:center;color:#b09497;line-height:2}.quiz-setup{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0}.choice{border:1px solid #ead7db;border-radius:16px;background:#fffaf9;padding:16px 14px;text-align:left;color:#896d78;font-size:12px;min-height:102px}.choice strong{display:block;color:#694e58;margin-bottom:5px;font-size:15px}.choice.selected{border:2px solid #c58a9d;background:#fff0f2;padding:15px 13px}.big-question{text-align:center;padding:28px 14px 18px}.big-question .number{color:#b98a9c;font-size:12px;letter-spacing:2px}.big-question h2{font-family:Georgia,"Songti SC",serif;font-size:33px;line-height:1.4;color:#69505a}.big-input{width:100%;max-width:440px;font-family:Georgia,"PingFang SC",serif;font-size:23px;text-align:center;letter-spacing:1px;border-radius:16px;border:1.5px solid #e8c9d0;background:white;padding:14px 12px;color:#6d4c56}.quiz-feedback{border-radius:17px;padding:18px;background:#f4f5ec;max-width:500px;margin:20px auto 0;line-height:1.8}.quiz-feedback.bad{background:#fff0ed}.quiz-feedback .correctword{font-family:Georgia,serif;font-size:24px;font-weight:700;color:#b06f85}.quiz-progress{display:flex;gap:4px}.quiz-dot{height:6px;flex:1;background:#f0e1e2;border-radius:30px}.quiz-dot.done{background:#cc99a9}.quiz-dot.now{background:#9f6379}.quiz-result{font-size:50px;font-weight:800;font-family:Georgia,serif;text-align:center;color:#9e6c81;margin:18px 0 0}.calendar-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(265px,.8fr);gap:18px}.calendar-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.calendar-nav strong{font-size:18px;color:#755963}.calendar-nav button{border:1px solid #e9d8d9;background:white;color:#9a7182;border-radius:10px;width:33px;height:33px}.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}.weekday{text-align:center;font-size:11px;color:#bc9fa6;padding-bottom:12px}.daycell{border:1px solid transparent;background:#fff8f7;border-radius:14px;min-height:73px;padding:9px 7px;text-align:left;color:#997c82;position:relative}.daycell.today{border-color:#dfb4c0}.daycell.selected{border:2px solid #c2849a;padding:8px 6px;background:#fff0f2}.daycell.checked{background:#edf5ee}.daycell .daynum{font-size:13px;font-weight:800}.daycell .mark{position:absolute;bottom:7px;right:8px;color:#72a081;font-size:16px}.daycell small{display:block;font-size:9px;margin-top:7px;color:#a6a09d}.note-area{width:100%;min-height:100px;border:1px solid #ebdade;border-radius:13px;padding:12px;resize:vertical;background:#fffdfc;color:var(--ink);font-size:13px;line-height:1.8}.field{display:grid;gap:6px;margin-bottom:13px;font-size:12px;color:#a07c88;font-weight:650}.field input,.field select,.field textarea{border:1px solid #ead9dd;border-radius:12px;padding:12px;font-size:13px;background:white;color:var(--ink);width:100%}.field textarea{min-height:110px;resize:vertical}.tip{background:#fff4e6;color:#a67a54;border-radius:14px;font-size:12px;padding:12px 14px;line-height:1.75}.footer-note{font-size:11px;color:#a9999d;margin-top:22px;line-height:1.8}.mobile-nav{display:none}.toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,16px);background:#674f59;color:white;border-radius:20px;padding:12px 20px;box-shadow:0 12px 26px #60404b35;font-size:13px;z-index:999;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1120px){.main{padding:30px 24px 78px}.word-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:29px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.sidebar{display:none}.main{padding:20px 15px calc(110px + env(safe-area-inset-bottom));width:100%;max-width:620px}.topline{margin-bottom:14px}.page-title{font-size:27px}.hero{grid-template-columns:1fr .55fr;min-height:207px;border-radius:23px}.hero-copy{padding:23px 0 24px 20px}.hero h1{font-size:25px;margin:7px 0}.hero p{font-size:11px;margin-bottom:12px}.hero-art{min-height:200px;align-items:end}.dog-svg{width:184px;max-width:195%;position:absolute;right:-6px;bottom:1px}.jelly{font-size:29px;right:7%;top:28%}.stats{gap:9px}.stat{padding:13px;border-radius:16px}.stat b{font-size:25px}.twocol,.calendar-layout{grid-template-columns:1fr}.card{padding:17px;border-radius:20px}.word-grid{grid-template-columns:1fr 1fr;gap:9px}.wordcard{padding:12px;min-height:206px;border-radius:18px}.wordcard .word{font-size:19px}.wordcard .actions .btn{padding:8px 5px;font-size:11px}.wordcard .meaning{font-size:12px;min-height:43px}.wordcard .speak{width:28px;height:28px;font-size:13px}.quiz-setup{grid-template-columns:1fr;gap:8px}.choice{min-height:0}.big-question h2{font-size:29px}.mobile-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;position:fixed;bottom:0;left:0;right:0;z-index:50;background:#fffaf9eb;backdrop-filter:blur(21px);border-top:1px solid #eddde0;padding:7px 6px calc(8px + env(safe-area-inset-bottom));box-shadow:0 -6px 25px #99596c12}.mobile-nav button{border:0;border-radius:13px;background:transparent;color:#aa9298;font-size:10px;padding:6px 1px;display:grid;justify-items:center;gap:3px}.mobile-nav button span{font-size:20px}.mobile-nav button.active{background:#fae8ec;color:#a86b80;font-weight:800}.toast{bottom:calc(83px + env(safe-area-inset-bottom))}.calendar-grid{gap:4px}.daycell{min-height:57px;border-radius:11px;padding:7px 5px}.daycell.selected{padding:6px 4px}.daycell small{display:none}.daycell .mark{font-size:12px;right:4px;bottom:4px}.section-gap{margin-top:17px}}@media(max-width:370px){.word-grid{grid-template-columns:1fr}.hero{grid-template-columns:1fr .38fr}.hero h1{font-size:22px}.dog-svg{width:150px}.jelly{font-size:24px}.stat b{font-size:22px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div><div id="toast" class="toast" role="status" aria-live="polite"></div><input id="importFile" type="file" accept="application/json,.json" style="display:none"/>
+<script>
+const SEED=[
+  {
+    "id": "d1-1",
+    "day": 1,
+    "en": "emotion",
+    "zh": "情绪；情感",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-2",
+    "day": 1,
+    "en": "stem",
+    "zh": "茎；干；起源于",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-3",
+    "day": 1,
+    "en": "overseas",
+    "zh": "海外的；在海外",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-4",
+    "day": 1,
+    "en": "largely",
+    "zh": "主要地；在很大程度上",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-5",
+    "day": 1,
+    "en": "via",
+    "zh": "通过；经由",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-6",
+    "day": 1,
+    "en": "unless",
+    "zh": "除非",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-7",
+    "day": 1,
+    "en": "surround",
+    "zh": "围绕；包围",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-8",
+    "day": 1,
+    "en": "executive",
+    "zh": "高管；经理；执行的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-9",
+    "day": 1,
+    "en": "chemical",
+    "zh": "化学的；化学品",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-10",
+    "day": 1,
+    "en": "therefore",
+    "zh": "因此",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-11",
+    "day": 1,
+    "en": "besides",
+    "zh": "此外；而且",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-12",
+    "day": 1,
+    "en": "immediately",
+    "zh": "立即；马上",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-13",
+    "day": 1,
+    "en": "concentrate",
+    "zh": "集中；专心",
+    "wrongCount": 2,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-14",
+    "day": 1,
+    "en": "highway",
+    "zh": "公路；高速公路",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-15",
+    "day": 1,
+    "en": "electric",
+    "zh": "电的；电动的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-16",
+    "day": 1,
+    "en": "apart",
+    "zh": "分开；相隔",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-17",
+    "day": 1,
+    "en": "commit",
+    "zh": "犯（罪、错）；承诺；投入",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-18",
+    "day": 1,
+    "en": "vacation",
+    "zh": "假期",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-19",
+    "day": 1,
+    "en": "mass",
+    "zh": "大量；团；块",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-20",
+    "day": 1,
+    "en": "normally",
+    "zh": "通常；正常地",
+    "wrongCount": 2,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-21",
+    "day": 1,
+    "en": "represent",
+    "zh": "代表；象征",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-22",
+    "day": 1,
+    "en": "nap",
+    "zh": "小睡",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-23",
+    "day": 1,
+    "en": "psychological",
+    "zh": "心理的",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-24",
+    "day": 1,
+    "en": "truly",
+    "zh": "真正地",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-25",
+    "day": 1,
+    "en": "approve",
+    "zh": "批准；赞成",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-26",
+    "day": 1,
+    "en": "principle",
+    "zh": "原则；准则",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-27",
+    "day": 1,
+    "en": "industrial",
+    "zh": "工业的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-28",
+    "day": 1,
+    "en": "fairly",
+    "zh": "公平地；相当地",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-29",
+    "day": 1,
+    "en": "oppose",
+    "zh": "反对",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-30",
+    "day": 1,
+    "en": "profit",
+    "zh": "利润；获利",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-31",
+    "day": 1,
+    "en": "crucial",
+    "zh": "至关重要的",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-32",
+    "day": 1,
+    "en": "aside",
+    "zh": "在一旁；到一边",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-33",
+    "day": 1,
+    "en": "devote",
+    "zh": "致力于；奉献",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-34",
+    "day": 1,
+    "en": "signal",
+    "zh": "信号；暗号；迹象",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-35",
+    "day": 1,
+    "en": "dramatic",
+    "zh": "戏剧性的；剧烈的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-36",
+    "day": 1,
+    "en": "rarely",
+    "zh": "很少；难得",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-37",
+    "day": 1,
+    "en": "recover",
+    "zh": "恢复；康复",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-38",
+    "day": 1,
+    "en": "union",
+    "zh": "联盟；工会",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-39",
+    "day": 1,
+    "en": "artificial",
+    "zh": "人工的；人造的",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-40",
+    "day": 1,
+    "en": "deadly",
+    "zh": "致命的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-41",
+    "day": 1,
+    "en": "shrink",
+    "zh": "收缩；缩小",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-42",
+    "day": 1,
+    "en": "advocate",
+    "zh": "提倡；拥护",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-43",
+    "day": 1,
+    "en": "federal",
+    "zh": "联邦的",
+    "wrongCount": 2,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-44",
+    "day": 1,
+    "en": "restore",
+    "zh": "修复；使恢复原状",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-45",
+    "day": 1,
+    "en": "construction",
+    "zh": "建筑；施工",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-46",
+    "day": 1,
+    "en": "powerful",
+    "zh": "强大的；有力的",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-47",
+    "day": 1,
+    "en": "interact",
+    "zh": "互动；相互作用",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-48",
+    "day": 1,
+    "en": "mathematics",
+    "zh": "数学",
+    "wrongCount": 2,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-49",
+    "day": 1,
+    "en": "ideal",
+    "zh": "理想的；理想",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d1-50",
+    "day": 1,
+    "en": "specialize",
+    "zh": "专攻；专门从事",
+    "wrongCount": 2,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-1",
+    "day": 2,
+    "en": "phase",
+    "zh": "阶段；时期",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-2",
+    "day": 2,
+    "en": "domestic",
+    "zh": "国内的；家庭的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-3",
+    "day": 2,
+    "en": "thrive",
+    "zh": "繁荣；茁壮成长",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-4",
+    "day": 2,
+    "en": "percentage",
+    "zh": "百分比",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-5",
+    "day": 2,
+    "en": "elementary",
+    "zh": "基本的；初级的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-6",
+    "day": 2,
+    "en": "rescue",
+    "zh": "营救；救援",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-7",
+    "day": 2,
+    "en": "yield",
+    "zh": "产量；产生；屈服",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-8",
+    "day": 2,
+    "en": "virtual",
+    "zh": "虚拟的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-9",
+    "day": 2,
+    "en": "absorb",
+    "zh": "吸收；理解",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-10",
+    "day": 2,
+    "en": "silicon",
+    "zh": "硅",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-11",
+    "day": 2,
+    "en": "urgent",
+    "zh": "紧急的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-12",
+    "day": 2,
+    "en": "confirm",
+    "zh": "确认；证实",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-13",
+    "day": 2,
+    "en": "attribute",
+    "zh": "属性；特征；把……归因于",
+    "wrongCount": 2,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-14",
+    "day": 2,
+    "en": "productive",
+    "zh": "多产的；富有成效的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-15",
+    "day": 2,
+    "en": "sustain",
+    "zh": "维持；支撑",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-16",
+    "day": 2,
+    "en": "institute",
+    "zh": "机构；学院；建立",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-17",
+    "day": 2,
+    "en": "capable",
+    "zh": "有能力的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-18",
+    "day": 2,
+    "en": "differ",
+    "zh": "不同；相异",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-19",
+    "day": 2,
+    "en": "giant",
+    "zh": "巨大的；巨人",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-20",
+    "day": 2,
+    "en": "intelligent",
+    "zh": "聪明的；智能的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-21",
+    "day": 2,
+    "en": "generate",
+    "zh": "产生；生成",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-22",
+    "day": 2,
+    "en": "unemployment",
+    "zh": "失业",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-23",
+    "day": 2,
+    "en": "entire",
+    "zh": "全部的；整个的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-24",
+    "day": 2,
+    "en": "retire",
+    "zh": "退休；退役",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-25",
+    "day": 2,
+    "en": "witness",
+    "zh": "目击；见证；证人",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-26",
+    "day": 2,
+    "en": "legal",
+    "zh": "合法的；法律的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-27",
+    "day": 2,
+    "en": "install",
+    "zh": "安装",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-28",
+    "day": 2,
+    "en": "motor",
+    "zh": "发动机；电动机",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-29",
+    "day": 2,
+    "en": "vital",
+    "zh": "至关重要的；生命的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-30",
+    "day": 2,
+    "en": "identify",
+    "zh": "识别；确认身份",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-31",
+    "day": 2,
+    "en": "professor",
+    "zh": "教授",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-32",
+    "day": 2,
+    "en": "likely",
+    "zh": "可能的；很可能",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-33",
+    "day": 2,
+    "en": "instead",
+    "zh": "代替；反而",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-34",
+    "day": 2,
+    "en": "beyond",
+    "zh": "超出；在……之外",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-35",
+    "day": 2,
+    "en": "happen",
+    "zh": "发生",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-36",
+    "day": 2,
+    "en": "author",
+    "zh": "作者",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-37",
+    "day": 2,
+    "en": "social",
+    "zh": "社会的；社交的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-38",
+    "day": 2,
+    "en": "increasingly",
+    "zh": "越来越多地",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-39",
+    "day": 2,
+    "en": "per",
+    "zh": "每；每一",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-40",
+    "day": 2,
+    "en": "enhance",
+    "zh": "提高；增强",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-41",
+    "day": 2,
+    "en": "accord",
+    "zh": "一致；符合；协议",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-42",
+    "day": 2,
+    "en": "local",
+    "zh": "当地的；本地的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-43",
+    "day": 2,
+    "en": "recently",
+    "zh": "最近",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-44",
+    "day": 2,
+    "en": "despite",
+    "zh": "尽管；虽然",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-45",
+    "day": 2,
+    "en": "exhaust",
+    "zh": "耗尽；使筋疲力尽",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-46",
+    "day": 2,
+    "en": "system",
+    "zh": "系统；体系",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-47",
+    "day": 2,
+    "en": "digital",
+    "zh": "数字的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-48",
+    "day": 2,
+    "en": "generally",
+    "zh": "通常；普遍地",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-49",
+    "day": 2,
+    "en": "improve",
+    "zh": "改善；提高",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-50",
+    "day": 2,
+    "en": "kid",
+    "zh": "孩子",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-51",
+    "day": 2,
+    "en": "average",
+    "zh": "平均的；平均数",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d2-52",
+    "day": 2,
+    "en": "particularly",
+    "zh": "尤其；特别地",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-1",
+    "day": 3,
+    "en": "suppose",
+    "zh": "假设；认为",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-2",
+    "day": 3,
+    "en": "interest",
+    "zh": "兴趣；利益；利息",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-3",
+    "day": 3,
+    "en": "economic",
+    "zh": "经济的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-4",
+    "day": 3,
+    "en": "finally",
+    "zh": "最后；终于",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-5",
+    "day": 3,
+    "en": "release",
+    "zh": "释放；发布",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-6",
+    "day": 3,
+    "en": "technology",
+    "zh": "技术",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-7",
+    "day": 3,
+    "en": "global",
+    "zh": "全球的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-8",
+    "day": 3,
+    "en": "highly",
+    "zh": "高度地；非常",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-9",
+    "day": 3,
+    "en": "benefit",
+    "zh": "好处；受益",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-10",
+    "day": 3,
+    "en": "item",
+    "zh": "项目；一项",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-11",
+    "day": 3,
+    "en": "major",
+    "zh": "主要的；主修",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-12",
+    "day": 3,
+    "en": "necessarily",
+    "zh": "必然地；必要地",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-13",
+    "day": 3,
+    "en": "provide",
+    "zh": "提供",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-14",
+    "day": 3,
+    "en": "market",
+    "zh": "市场",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-15",
+    "day": 3,
+    "en": "physical",
+    "zh": "身体的；物理的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-16",
+    "day": 3,
+    "en": "worldwide",
+    "zh": "世界范围的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-17",
+    "day": 3,
+    "en": "acquire",
+    "zh": "获得；习得",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-18",
+    "day": 3,
+    "en": "blank",
+    "zh": "空白的；空白",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-19",
+    "day": 3,
+    "en": "academic",
+    "zh": "学术的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-20",
+    "day": 3,
+    "en": "anyway",
+    "zh": "无论如何",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-21",
+    "day": 3,
+    "en": "require",
+    "zh": "要求；需要",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-22",
+    "day": 3,
+    "en": "adult",
+    "zh": "成年人；成年的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-23",
+    "day": 3,
+    "en": "lower",
+    "zh": "降低；较低的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-24",
+    "day": 3,
+    "en": "elsewhere",
+    "zh": "在别处",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-25",
+    "day": 3,
+    "en": "include",
+    "zh": "包括",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-26",
+    "day": 3,
+    "en": "product",
+    "zh": "产品",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-27",
+    "day": 3,
+    "en": "professional",
+    "zh": "专业的；专业人员",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-28",
+    "day": 3,
+    "en": "create",
+    "zh": "创造",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-29",
+    "day": 3,
+    "en": "result",
+    "zh": "结果；导致",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-30",
+    "day": 3,
+    "en": "single",
+    "zh": "单个的；单身的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-31",
+    "day": 3,
+    "en": "support",
+    "zh": "支持；支撑",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-32",
+    "day": 3,
+    "en": "activity",
+    "zh": "活动",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-33",
+    "day": 3,
+    "en": "mental",
+    "zh": "精神的；心理的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-34",
+    "day": 3,
+    "en": "individual",
+    "zh": "个人；个体的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-35",
+    "day": 3,
+    "en": "factor",
+    "zh": "因素",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-36",
+    "day": 3,
+    "en": "financial",
+    "zh": "财务的；金融的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-37",
+    "day": 3,
+    "en": "encourage",
+    "zh": "鼓励",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-38",
+    "day": 3,
+    "en": "translation",
+    "zh": "翻译；译文",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-39",
+    "day": 3,
+    "en": "similar",
+    "zh": "相似的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-40",
+    "day": 3,
+    "en": "involve",
+    "zh": "涉及；包含",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-41",
+    "day": 3,
+    "en": "leader",
+    "zh": "领导者",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-42",
+    "day": 3,
+    "en": "medium",
+    "zh": "中等的；媒介",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-43",
+    "day": 3,
+    "en": "focus",
+    "zh": "焦点；专注",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-44",
+    "day": 3,
+    "en": "essay",
+    "zh": "文章；短文",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-45",
+    "day": 3,
+    "en": "potential",
+    "zh": "潜在的；潜力",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-46",
+    "day": 3,
+    "en": "concern",
+    "zh": "关心；担忧；涉及",
+    "wrongCount": 2,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-47",
+    "day": 3,
+    "en": "project",
+    "zh": "项目；计划",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-48",
+    "day": 3,
+    "en": "available",
+    "zh": "可获得的；有空的",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-49",
+    "day": 3,
+    "en": "engage",
+    "zh": "参与；从事",
+    "wrongCount": 1,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-50",
+    "day": 3,
+    "en": "account",
+    "zh": "账户；解释；描述",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-51",
+    "day": 3,
+    "en": "effective",
+    "zh": "有效的",
+    "wrongCount": 2,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  },
+  {
+    "id": "d3-52",
+    "day": 3,
+    "en": "design",
+    "zh": "设计",
+    "wrongCount": 0,
+    "correctCount": 0,
+    "streak": 0,
+    "reviewedAt": "",
+    "lastResult": ""
+  }
+];
+const STORAGE_KEY='xiaoluo-cet4-v1';
+const LABELS=[{id:'home',label:'首页',icon:'⌂'},{id:'words',label:'单词卡',icon:'▤'},{id:'quiz',label:'默写挑战',icon:'✎'},{id:'calendar',label:'打卡日历',icon:'▦'},{id:'settings',label:'资料箱',icon:'⚙'}];
+const HISTORY=[{date:'2026-11-01',label:'Day 1 第一轮验收',score:69,max:100,legacy:true},{date:'2026-11-01',label:'Day 1 第二轮验收',score:90,max:100,legacy:true},{date:'2026-11-01',label:'Day 1 第三轮验收',score:65,max:100,legacy:true},{date:'2026-11-01',label:'Day 1 错词回炉',score:77,max:90,legacy:true}];
+const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clone=o=>JSON.parse(JSON.stringify(o));
+function startingData(){return {schema:1,words:clone(SEED),checkins:{},sessions:clone(HISTORY),created:'2026-11-01'};}
+let db;
+let hasStorage=true;
+try{let raw=localStorage.getItem(STORAGE_KEY);db=raw?JSON.parse(raw):startingData();if(!Array.isArray(db.words)||!db.checkins||!Array.isArray(db.sessions))throw Error('invalid');}catch(err){db=startingData();hasStorage=false;}
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(db));hasStorage=true;}catch(err){hasStorage=false;toast('浏览器未能保存，请到资料箱导出备份。');}}
+if(hasStorage)save();
+let view='home', wordDay='1',wordFilter='wrong',wordSearch='',wordSort='wrong',revealed=new Set(),calOffset=0,selectedDate=today(),quizMode='wrong',quizDay='all',quiz=null;
+function today(){let d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');}
+function shortDate(s){let [y,m,d]=s.split('-');return `${Number(m)}月${Number(d)}日`;}
+function toast(msg){const x=document.getElementById('toast');x.textContent=msg;x.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>x.classList.remove('show'),2800);}
+function wById(id){return db.words.find(w=>w.id===id);}
+function pickedDay(){return wordDay==='all'?db.words:db.words.filter(w=>String(w.day)===wordDay);}
+function totalErrors(){return db.words.reduce((n,w)=>n+(w.wrongCount||0),0)}
+function mastered(){return db.words.filter(w=>(w.streak||0)>=2).length}
+function wrongWords(){return db.words.filter(w=>(w.wrongCount||0)>0)}
+function totalChecked(){return Object.values(db.checkins).filter(x=>x.checked).length}
+function streakDays(){let n=0;let d=new Date();for(let i=0;i<365;i++){const k=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');if(db.checkins[k]?.checked)n++;else if(i===0){}else break;d.setDate(d.getDate()-1)}return n}
+function iconDog(){return `<svg class="dog-svg" viewBox="0 0 300 244" aria-label="可爱小狗Sevrin" role="img"><ellipse cx="144" cy="225" rx="115" ry="11" fill="#ddaeb9" opacity=".25"/><path d="M66 107Q28 43 54 35Q91 28 116 73" fill="#b5856d" stroke="#885d58" stroke-width="5" stroke-linejoin="round"/><path d="M201 72Q237 22 258 41Q267 61 224 118" fill="#b5856d" stroke="#885d58" stroke-width="5" stroke-linejoin="round"/><ellipse cx="153" cy="126" rx="106" ry="95" fill="#f4dfce" stroke="#956f65" stroke-width="5"/><ellipse cx="154" cy="160" rx="65" ry="48" fill="#fff5e9"/><circle cx="115" cy="126" r="7.5" fill="#564743"/><circle cx="197" cy="126" r="7.5" fill="#564743"/><ellipse cx="154" cy="153" rx="12" ry="8" fill="#5c4845"/><path d="M154 159v13m0 0q-14 15-26 0m26 0q14 15 26 0" fill="none" stroke="#6b4e4a" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="93" cy="154" rx="15" ry="8" fill="#eea5ac" opacity=".55"/><ellipse cx="214" cy="154" rx="15" ry="8" fill="#eea5ac" opacity=".55"/><path d="M103 210q-5 24 14 26h76q16-8 8-29" fill="#f1c8b2" stroke="#956f65" stroke-width="4"/><path d="M124 210q30 11 58-1" stroke="#d9a4a1" stroke-width="4" fill="none"/><path d="M107 82q18-17 38-6" fill="none" stroke="#fff5e9" stroke-width="5" stroke-linecap="round"/></svg>`}
+function navTemplate(){return `<aside class="sidebar"><div class="brand"><div class="brand-title">小洛大战四级 <span style="font-size:15px">✿</span></div><div class="brand-sub">A LITTLE STUDY DIARY</div></div><nav class="nav">${LABELS.map(x=>`<button class="navbtn ${view===x.id?'active':''}" data-action="nav" data-value="${x.id}"><span>${x.icon}</span>${x.label}</button>`).join('')}</nav><div class="sidebar-foot">🐶 监督员 Sevrin 已上线<br/>🪼 Lorin 负责吐泡泡<br/><span style="color:#c98da1">今天也认真一点点。</span></div></aside><nav class="mobile-nav" aria-label="页面导航">${LABELS.map(x=>`<button class="${view===x.id?'active':''}" data-action="nav" data-value="${x.id}" aria-label="${x.label}"><span>${x.icon}</span>${x.label}</button>`).join('')}</nav>`}
+function heading(name,desc){return `<div class="topline"><div class="eyebrow">XIAOLUO · CET-4 PROJECT</div><div class="date-line">${shortDate(today())} · 每一天都算数</div></div><h1 class="page-title">${name}</h1><p class="page-desc">${desc}</p>`}
+function prog(label,val,total){return `<div class="progress-row"><div class="progress-head"><span>${label}</span><span>${val} / ${total}</span></div><div class="progress-track"><div class="progress-value" style="width:${total?Math.round(val/total*100):0}%"></div></div></div>`}
+function home(){let weak=wrongWords().sort((a,b)=>b.wrongCount-a.wrongCount).slice(0,7);let last=db.sessions.slice(-5).reverse();const checked=Boolean(db.checkins[today()]?.checked);return `<section class="hero"><div class="hero-copy"><div class="eyebrow">DEAR XIAOLUO, YOU GOT THIS ♡</div><h1>小洛大战四级<br/>今天再赢一点！</h1><p>单词忘了可以重来，错题次数我替你记。狗狗监督，水母鼓掌，复习记录不会再跑丢。</p><div class="row"><button class="btn primary" data-action="nav" data-value="quiz">✎ 开始10词挑战</button><button class="btn outline" data-action="checkin">${checked?'✓ 今日已打卡':'♡ 今天打个卡'}</button></div></div><div class="hero-art"><span class="spark">✧</span>${iconDog()}<span class="jelly">🪼</span></div></section>
+<div class="stats"><div class="stat"><div class="stat-label">✦ 录入词汇</div><b>${db.words.length}</b><small>Day 1–3 全部在这</small></div><div class="stat"><div class="stat-label">✎ 有过错误的词</div><b>${wrongWords().length}</b><small>累计 ${totalErrors()} 次错误记录</small></div><div class="stat"><div class="stat-label">♡ 站内连对2次</div><b>${mastered()}</b><small>满2次视作站内熟练</small></div><div class="stat"><div class="stat-label">▦ 已打卡天数</div><b>${totalChecked()}</b><small>当前连续 ${streakDays()} 天</small></div></div>
+<div class="twocol section-gap"><div class="card"><div class="panel-title"><h3>📖 学习进度</h3><span class="pill rose">Day 1 已完成50词抽查</span></div><div class="tiny">站内“熟练”需连续答对2次；历史聊天成绩单独保留，不冒充站内新练习。</div>${[1,2,3].map(n=>{let all=db.words.filter(w=>w.day===n);return prog(`Day ${n} · ${n===1?'50':'52'}词`,all.filter(w=>(w.streak||0)>=2).length,all.length)}).join('')}<div class="divider"></div><div class="row between"><span class="tiny">☕ 小目标：先把4个顽固错词拿下</span><button class="btn small soft" data-action="nav" data-value="words">去看小卡片 →</button></div></div>
+<div class="card"><div class="panel-title"><h3>✉️ 最需要照顾的词</h3><button class="btn plain small" data-action="nav" data-value="words">全部错词 →</button></div><div class="cloud">${weak.map(w=>`<button class="chip" data-action="open-word" data-value="${e(w.id)}">${e(w.en)} <strong>×${w.wrongCount}</strong></button>`).join('')}</div><div class="tip" style="margin-top:18px">😾 当前重点：federal、mathematics、normally、specialize。历史犯错次数不会因为答对而清零，这样才能看见自己一路怎么进步的。</div></div></div>
+<div class="card section-gap"><div class="panel-title"><h3>✎ 我们已经做过的验收</h3><span class="tiny">含聊天中已批改的历史成绩</span></div>${last.map(s=>`<div class="record"><span class="record-icon">${s.legacy?'✉':'★'}</span><div class="record-main">${e(s.label)}<div class="record-sub">${e(s.date)} · ${s.legacy?'聊天验收':'站内练习'}</div></div><div class="record-score">${s.score}/${s.max}</div></div>`).join('')}<p class="footer-note">词义释义来自常见词典义项的人工整理，与你上传的书上英文词表一一对应；历史错误只按对话中真实批改记录初始化，之后自动累加。</p></div>`}
+function filteredWords(){let x=pickedDay().filter(w=>{if(wordFilter==='wrong'&&w.wrongCount===0)return false;if(wordFilter==='new'&&(w.correctCount||0)>0||(wordFilter==='new'&&(w.wrongCount||0)>0))return false;if(wordFilter==='mastered'&&(w.streak||0)<2)return false;return !wordSearch||w.en.toLowerCase().includes(wordSearch.toLowerCase())||w.zh.includes(wordSearch)});if(wordSort==='wrong')x.sort((a,b)=>b.wrongCount-a.wrongCount||(a.day-b.day));else if(wordSort==='az')x.sort((a,b)=>a.en.localeCompare(b.en));else x.sort((a,b)=>a.day-b.day||Number(a.id.split('-')[1])-Number(b.id.split('-')[1]));return x;}
+function wordsPage(){let arr=filteredWords();return heading('错词小卡片','每一次想不起来，都算一次有价值的记录。点开卡片看释义，自己判断是否记住。')+`<div class="toolbar"><div class="seg">${[['1','Day 1'],['2','Day 2'],['3','Day 3'],['all','全部']].map(x=>`<button class="${wordDay===x[0]?'active':''}" data-action="wordday" data-value="${x[0]}">${x[1]}</button>`).join('')}</div><div class="seg">${[['wrong','错词'],['all','全部'],['new','未复习'],['mastered','已熟练']].map(x=>`<button class="${wordFilter===x[0]?'active':''}" data-action="wordfilter" data-value="${x[0]}">${x[1]}</button>`).join('')}</div><input class="search" id="wordSearch" placeholder="🔎 搜英文或中文..." value="${e(wordSearch)}" aria-label="搜索单词"/><select class="filter-select" id="wordSort"><option value="wrong" ${wordSort==='wrong'?'selected':''}>错次最多</option><option value="book" ${wordSort==='book'?'selected':''}>书本顺序</option><option value="az" ${wordSort==='az'?'selected':''}>A–Z</option></select></div><div class="row between" style="margin-bottom:13px"><span class="tiny">显示 ${arr.length} 个 · 错误次数按历史记录和站内练习累计</span><span class="pill orange">答对不会抹掉错题次数</span></div>${arr.length?`<div class="word-grid">${arr.map(wordCard).join('')}</div>`:`<div class="card empty">这一组暂时没有单词。换个筛选条件看看吧。🪼</div>`}`}
+function wordCard(w){let show=revealed.has(w.id);return `<article class="wordcard" id="word-${e(w.id)}"><div class="meta"><span class="pill ${w.wrongCount?'rose':'green'}">${w.wrongCount?`犯错 ${w.wrongCount} 次`:'暂无错词记录'}</span><button class="speak" title="播放读音" aria-label="朗读${e(w.en)}" data-action="speak" data-value="${e(w.en)}">♫</button></div><strong class="word">${e(w.en)}</strong><div style="margin:9px 0 12px"><div class="meaning ${show?'':'hidden'}">${show?e(w.zh):'♡ 点击下方按钮翻开释义'}</div></div><div class="tiny" style="margin-bottom:12px">Day ${w.day} · ${w.streak>=2?'✓ 连对两次':'连续答对 '+(w.streak||0)+' 次'}</div><div class="actions"><button class="btn soft small" data-action="flip" data-value="${e(w.id)}">${show?'收起释义':'翻开答案'}</button>${show?`<button class="btn good small" data-action="rate-good" data-value="${e(w.id)}">记住了</button><button class="btn bad small" data-action="rate-bad" data-value="${e(w.id)}">还不会</button>`:''}</div></article>`}
+function quizStart(mode=quizMode,day=quizDay){let words=db.words.filter(w=>day==='all'||String(w.day)===day);if(mode==='wrong')words=words.filter(w=>w.wrongCount>0);if(mode==='new')words=words.filter(w=>w.wrongCount===0&&(w.correctCount||0)===0);if(!words.length){toast('这个范围暂时没有符合条件的单词，换一组吧。');return}let a=words.map(w=>({w,key:mode==='wrong'?-Math.log(Math.max(Math.random(),1e-9))/(1+w.wrongCount*2):Math.random()}));a.sort((x,y)=>x.key-y.key);let ids=a.slice(0,Math.min(10,a.length)).map(x=>x.w.id);quiz={mode,day,ids,at:0,checked:false,answer:'',correct:false,score:0,results:[]};render();}
+function quizPage(){if(!quiz){return heading('默写挑战','先选挑战范围。只看中文，自己拼出完整的英文——数学可不能永远只写 math 哦。')+`<div class="card"><div class="sub-title">选择挑战类型</div><div class="quiz-setup">${[['wrong','错词突击','优先抽取犯错多的单词'],['random','随机混合','从指定范围随机抽10个'],['new','全新探索','只抽还没练过的单词']].map(x=>`<button class="choice ${quizMode===x[0]?'selected':''}" data-action="quizmode" data-value="${x[0]}"><strong>${x[1]}</strong>${x[2]}</button>`).join('')}</div><div class="sub-title">单词范围</div><div class="seg" style="margin-bottom:22px">${[['all','全部'],['1','Day 1'],['2','Day 2'],['3','Day 3']].map(x=>`<button class="${quizDay===x[0]?'active':''}" data-action="quizday" data-value="${x[0]}">${x[1]}</button>`).join('')}</div><div class="tip" style="margin-bottom:19px">🐶 每道题都会核对拼写。答错一次就给对应的错词计数 +1，答对一次则增加连续正确次数。答错后会展示正确答案。</div><button class="btn primary" data-action="quiz-start">✎ 开始这轮挑战</button></div>`}
+if(quiz.at>=quiz.ids.length){let n=quiz.ids.length;return heading('挑战结算','每一次拼对，都是你自己从记忆里捞出来的。')+`<div class="card" style="text-align:center"><div class="eyebrow">CHALLENGE COMPLETE</div><div class="quiz-result">${Math.round(quiz.score/n*100)}<span style="font-size:20px">分</span></div><p style="color:#a1848b;font-size:13px">${n}题答对 ${quiz.score} 题 · ${quiz.score>=n*0.9?'🐶 你赢啦！':'🌷 错词已经帮你收进小卡片了'}</p><div class="cloud" style="justify-content:center">${quiz.results.filter(r=>!r.correct).map(r=>{let w=wById(r.id);return `<button class="chip" data-action="open-word" data-value="${e(w.id)}">${e(w.en)} ×${w.wrongCount}</button>`}).join('')||'<span class="pill green">完美！本轮没有错词</span>'}</div><div class="row" style="justify-content:center;margin-top:24px"><button class="btn primary" data-action="quiz-again">再来一轮</button><button class="btn outline" data-action="nav" data-value="words">查看错词</button></div></div>`}
+let w=wById(quiz.ids[quiz.at]);return heading('正在挑战','不要偷看词表。我负责记住你错在哪里，慢慢攻克。')+`<div class="card"><div class="row between"><span class="pill rose">第 ${quiz.at+1} / ${quiz.ids.length} 题</span><span class="tiny">✎ 已答对 ${quiz.score} 题</span></div><div class="quiz-progress" style="margin-top:14px">${quiz.ids.map((x,i)=>`<div class="quiz-dot ${i<quiz.at?'done':i===quiz.at?'now':''}"></div>`).join('')}</div><div class="big-question"><div class="number">CHINESE → ENGLISH</div><h2>${e(w.zh.split('；').slice(0,2).join('；'))}</h2><div class="tiny" style="margin-bottom:19px">请输入英文原形 · Day ${w.day}</div><input type="text" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" id="quizInput" class="big-input" placeholder="英文拼写..." ${quiz.checked?'disabled':''} value="${e(quiz.answer)}" aria-label="英文默写答案"/>${quiz.checked?`<div class="quiz-feedback ${quiz.correct?'':'bad'}"><div style="font-weight:800">${quiz.correct?'✓ 答对了！':'✿ 这一题记进错词本了'}</div><div class="correctword">${e(w.en)}</div><div class="tiny" style="margin-top:5px">${e(w.zh)}</div>${!quiz.correct?`<div class="tiny" style="margin-top:7px">你写的是：${e(quiz.answer||'（空白）')}</div>`:''}</div>`:''}</div><div class="row" style="justify-content:center;margin-bottom:8px">${quiz.checked?`<button class="btn primary" data-action="quiz-next">${quiz.at===quiz.ids.length-1?'查看成绩':'下一题 →'}</button>`:`<button class="btn primary" data-action="quiz-check">检查答案</button><button class="btn soft" data-action="quiz-skip">想不起来，记错一次</button>`}</div></div>`}
+function recordQuiz(correct){let w=wById(quiz.ids[quiz.at]);if(correct){w.correctCount=(w.correctCount||0)+1;w.streak=(w.streak||0)+1;}else{w.wrongCount=(w.wrongCount||0)+1;w.streak=0;}w.reviewedAt=today();w.lastResult=correct?'correct':'wrong';quiz.correct=correct;quiz.checked=true;quiz.score+=correct?1:0;quiz.results.push({id:w.id,correct,typed:quiz.answer});save();render();}
+function quizNext(){if(!quiz?.checked)return;quiz.at++;quiz.checked=false;quiz.answer='';if(quiz.at===quiz.ids.length){db.sessions.push({date:today(),label:(quiz.mode==='wrong'?'错词突击':quiz.mode==='new'?'新词探索':'随机默写')+' · '+(quiz.day==='all'?'全部':`Day ${quiz.day}`),score:quiz.score*10,max:quiz.ids.length*10,legacy:false});save();}render();}
+function monthBase(){let d=new Date();d.setDate(1);d.setMonth(d.getMonth()+calOffset);return d;}
+function calendarPage(){let m=monthBase();let y=m.getFullYear(),mon=m.getMonth(),days=new Date(y,mon+1,0).getDate(),start=(m.getDay()+6)%7;let cells=[];for(let i=0;i<start;i++)cells.push('<div></div>');for(let n=1;n<=days;n++){let key=`${y}-${String(mon+1).padStart(2,'0')}-${String(n).padStart(2,'0')}`,z=db.checkins[key];cells.push(`<button class="daycell ${key===today()?'today':''} ${selectedDate===key?'selected':''} ${z?.checked?'checked':''}" data-action="cal-day" data-value="${key}" aria-label="${key}${z?.checked?'已打卡':''}"><span class="daynum">${n}</span>${z?.checked?'<span class="mark">♥</span>':''}${z?.note?'<small>✎ 有记录</small>':''}</button>`)}let cur=db.checkins[selectedDate]||{checked:false,note:''};return heading('打卡日历','认真背过的日子，值得留下一个小小的印章。')+`<div class="calendar-layout"><div class="card"><div class="calendar-nav"><button data-action="cal-prev" aria-label="上个月">‹</button><strong>${y} 年 ${mon+1} 月</strong><button data-action="cal-next" aria-label="下个月">›</button></div><div class="calendar-grid">${['一','二','三','四','五','六','日'].map(x=>`<div class="weekday">${x}</div>`).join('')}${cells.join('')}</div><div class="row between" style="margin-top:21px"><span class="tiny">♥ 是打卡日 · 今日 ${db.checkins[today()]?.checked?'已完成':'还没打卡'}</span><button class="btn small soft" data-action="cal-now">回到今天</button></div></div><div class="card"><h3>✉️ ${selectedDate===today()?'今天':'这一天'}的学习纸条</h3><p class="tiny">${e(selectedDate)} · ${cur.checked?'已打卡 ✓':'尚未打卡'}</p><div class="divider"></div><label class="field">今天记住了什么？<textarea id="diaryNote" placeholder="例如：mathematics终于拼对了！">${e(cur.note||'')}</textarea></label><button class="btn primary" data-action="save-note">保存这张小纸条</button>${selectedDate===today()?`<button class="btn ${cur.checked?'outline':'soft'}" style="margin-left:6px" data-action="checkin">${cur.checked?'取消今日打卡':'♥ 今日打卡'}</button>`:''}<div class="tip" style="margin-top:17px">日历不自动帮你打卡：只有你点了，才算今天真正完成了学习。☁️</div></div></div>`}
+function settingsPage(){return heading('资料箱','单词、错词次数、练习和日记都存在当前浏览器里。记得定期导出备份。')+`<div class="twocol"><div class="card"><h3>＋ 添加自己的单词</h3><p class="tiny">可以把之后的新词加进来，自动进入小卡片和挑战题库。</p><label class="field">英文<input id="newEn" placeholder="例如：resilience" autocomplete="off"/></label><label class="field">中文释义<input id="newZh" placeholder="例如：韧性；恢复力"/></label><label class="field">所属单元<select id="newDay"><option value="1">Day 1</option><option value="2">Day 2</option><option value="3">Day 3</option><option value="4">Day 4</option><option value="5">Day 5</option><option value="6">Day 6</option><option value="7">Day 7</option></select></label><button class="btn primary" data-action="add-word">把它加入单词本 ♡</button></div><div class="card"><h3>▤ 批量导入单词</h3><p class="tiny">每行一个，格式：英文 | 中文 | Day数字。已有英文词会自动跳过，不覆盖错词次数。</p><label class="field">复制粘贴词表<textarea id="bulkInput" placeholder="resilience | 韧性；恢复力 | 4&#10;dedicate | 奉献；致力于 | 4"></textarea></label><button class="btn soft" data-action="bulk-import">批量添加</button><div class="divider"></div><div class="tiny">已经预置你拍照的 Day 1–3 共154词，可以继续添加后面的单元。</div></div></div><div class="card section-gap"><h3>✿ 备份与恢复</h3><p class="tiny" style="line-height:1.9">数据只保存在这个网站的当前浏览器中。换设备、清除浏览器数据，或换网址时可能看不到原记录。建议每隔几天导出一次 JSON 备份。</p><div class="row"><button class="btn primary" data-action="export">↓ 导出全部学习记录</button><button class="btn outline" data-action="import">↑ 导入此前备份</button><button class="btn plain" data-action="reset">重置全部数据</button></div><div class="tip" style="margin-top:18px">${hasStorage?'✓ 浏览器本地存储当前可用。':'⚠ 当前浏览器可能限制本地存储，请务必导出备份。'} 这个版本不需要注册账号，也没有云同步功能。</div></div><p class="footer-note">Made for Xiaoluo · 🐶 Sevrin & 🪼 Lorin · 离线单页版，无广告，无数据上传。</p>`}
+function render(){const content=view==='home'?home():view==='words'?wordsPage():view==='quiz'?quizPage():view==='calendar'?calendarPage():settingsPage();document.getElementById('app').innerHTML=navTemplate()+`<main class="main">${content}</main>`;if(view==='quiz'&&quiz&&!quiz.checked&&quiz.at<quiz.ids.length){let x=document.getElementById('quizInput');if(x)x.focus({preventScroll:true});}}
+function updateWord(id,correct){let w=wById(id);if(!w)return;if(correct){w.correctCount=(w.correctCount||0)+1;w.streak=(w.streak||0)+1;}else{w.wrongCount=(w.wrongCount||0)+1;w.streak=0;}w.reviewedAt=today();w.lastResult=correct?'correct':'wrong';revealed.delete(id);save();toast(correct?`✓ ${w.en} 记住一次！`:`✎ ${w.en} 已记入错词 ×${w.wrongCount}`);render();}
+function pronounce(en){if(!('speechSynthesis' in window)){toast('此浏览器暂不支持英语朗读。');return}window.speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(en);u.lang='en-US';u.rate=.75;u.pitch=1.05;window.speechSynthesis.speak(u)}
+function addWord(en,zh,day){en=en.trim().toLowerCase();zh=zh.trim();day=Number(day);if(!/^[a-z][a-z\s-]*$/.test(en)||!zh||!Number.isInteger(day)||day<1||day>99)return '词条格式不正确';if(db.words.some(w=>w.en.toLowerCase()===en))return '这个词已经在词本里了';db.words.push({id:'custom-'+Date.now()+'-'+Math.random().toString(36).slice(2,6),day,en,zh,wrongCount:0,correctCount:0,streak:0,reviewedAt:'',lastResult:''});return null}
+function exportBackup(){const content=JSON.stringify({...db,exportedAt:new Date().toISOString()},null,2);const blob=new Blob([content],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`小洛大战四级_学习备份_${today()}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000);toast('♡ 备份文件已生成');}
+function importBackup(data){if(!data||!Array.isArray(data.words)||!data.words.length||!data.checkins||!Array.isArray(data.sessions))throw Error('不是本站备份文件');for(const w of data.words){if(typeof w.en!=='string'||typeof w.zh!=='string'||!Number.isInteger(Number(w.day))||!Number.isFinite(Number(w.wrongCount))||Number(w.wrongCount)<0)throw Error('备份单词数据损坏');}db={schema:1,words:data.words.map(w=>({...w,wrongCount:Math.max(0,Math.floor(Number(w.wrongCount))),correctCount:Math.max(0,Math.floor(Number(w.correctCount)||0)),streak:Math.max(0,Math.floor(Number(w.streak)||0))})),checkins:data.checkins,sessions:data.sessions.slice(-500),created:data.created||today()};save();revealed.clear();view='home';render();toast('♡ 备份恢复成功');}
+document.addEventListener('click',evt=>{let b=evt.target.closest('[data-action]');if(!b)return;const action=b.dataset.action,val=b.dataset.value;
+if(action==='nav'){view=val;render();window.scrollTo(0,0)}
+else if(action==='open-word'){view='words';wordDay='all';wordFilter='all';wordSearch=wById(val)?.en||'';revealed.add(val);render();window.scrollTo(0,0)}
+else if(action==='wordday'){wordDay=val;render()}
+else if(action==='wordfilter'){wordFilter=val;render()}
+else if(action==='flip'){revealed.has(val)?revealed.delete(val):revealed.add(val);render()}
+else if(action==='rate-good')updateWord(val,true);
+else if(action==='rate-bad')updateWord(val,false);
+else if(action==='speak')pronounce(val);
+else if(action==='quizmode'){quizMode=val;render()}
+else if(action==='quizday'){quizDay=val;render()}
+else if(action==='quiz-start'){quizStart(quizMode,quizDay)}
+else if(action==='quiz-check'||action==='quiz-skip'){if(!quiz||quiz.checked)return;quiz.answer=action==='quiz-skip'?'':(document.getElementById('quizInput')?.value||'').trim();const w=wById(quiz.ids[quiz.at]);recordQuiz(quiz.answer.toLowerCase().replace(/\s+/g,' ')===w.en.toLowerCase())}
+else if(action==='quiz-next')quizNext();
+else if(action==='quiz-again'){quiz=null;render()}
+else if(action==='checkin'){let k=today();db.checkins[k]={...(db.checkins[k]||{}),checked:!db.checkins[k]?.checked};save();render();toast(db.checkins[k].checked?'♡ 打卡成功！今天的努力被记下了':'今天的打卡已取消');}
+else if(action==='cal-prev'){calOffset--;render()}
+else if(action==='cal-next'){calOffset++;render()}
+else if(action==='cal-day'){selectedDate=val;render()}
+else if(action==='cal-now'){calOffset=0;selectedDate=today();render()}
+else if(action==='save-note'){const s=document.getElementById('diaryNote')?.value||'';db.checkins[selectedDate]={...(db.checkins[selectedDate]||{}),note:s.slice(0,3000)};save();render();toast('✉️ 小纸条已经保存');}
+else if(action==='add-word'){let err=addWord(document.getElementById('newEn').value,document.getElementById('newZh').value,document.getElementById('newDay').value);if(err){toast(err);return}save();render();toast('♡ 已加入单词本');}
+else if(action==='bulk-import'){let raw=document.getElementById('bulkInput').value.split('\n'),added=0,skipped=0;for(const line of raw){if(!line.trim())continue;let pieces=line.split('|');let err=pieces.length>=2?addWord(pieces[0],pieces[1],pieces[2]||'4'):'无效';if(err)skipped++;else added++;}save();render();toast(`添加 ${added} 词，跳过 ${skipped} 行`)}
+else if(action==='export')exportBackup();
+else if(action==='import')document.getElementById('importFile').click();
+else if(action==='reset'){if(confirm('真的要清空站内所有新增记录，并恢复最初的154词与历史错词吗？此操作无法撤销，请先导出备份。')&&confirm('再确认一次：确定重置吗？')){db=startingData();save();quiz=null;revealed.clear();view='home';render();toast('已恢复初始状态')}}
+});
+document.addEventListener('input',evt=>{if(evt.target?.id==='quizInput'&&quiz)quiz.answer=evt.target.value;if(evt.target?.id==='wordSearch'){wordSearch=evt.target.value;let s=evt.target.selectionStart;render();let el=document.getElementById('wordSearch');el?.focus({preventScroll:true});el?.setSelectionRange(s,s)}});
+document.addEventListener('change',evt=>{if(evt.target.id==='wordSort'){wordSort=evt.target.value;render()}else if(evt.target.id==='importFile'){let f=evt.target.files?.[0];if(!f)return;f.text().then(t=>{const data=JSON.parse(t);if(confirm('导入备份会覆盖当前网站的学习记录。是否继续？'))importBackup(data)}).catch(err=>toast('导入失败：'+err.message));evt.target.value=''}});
+document.addEventListener('keydown',evt=>{if(evt.key==='Enter'&&evt.target?.id==='quizInput'){evt.preventDefault();document.querySelector('[data-action="quiz-check"]')?.click()}});
+render();
+</script>
+</body></html>
